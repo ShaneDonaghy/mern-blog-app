@@ -7,13 +7,10 @@ export default [
   js.configs.recommended,
   {
     plugins: {
-      react,
-      'jsx-a11y': jsxA11y,
+
     },
     settings: {
-      react: {
-        version: 'detect',
-      },
+
     },
     languageOptions: {
       parserOptions: {
@@ -22,16 +19,10 @@ export default [
       },
     },
     rules: {
-      ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
-      ...jsxA11y.configs.recommended.rules,
       ...prettier.rules, // Disables conflicting rules
     },
   },
   {
     files: ['**/*.ts', '**/*.tsx'],
-    // Add TypeScript-specific config if using @typescript-eslint/parser and plugin
-    // languageOptions: { parser: tsParser },
-    // rules: { ... }
   },
 ];
