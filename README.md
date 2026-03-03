@@ -1,8 +1,30 @@
+# Modern Full-Stack React Projects / Chapter 1
 
-**Available Routes:**
-GET /api/v1/posts?author=shane: Get a list of posts by author “shane”  
-GET /api/v1/posts?tag=fiction: Get a list of posts with the tag "fiction"  
-GET /api/v1/posts/:id: Get a single post by ID  
-POST /api/v1/posts: Create a new post  
-PATCH /api/v1/posts/:id: Update an existing post by ID  
-DELETE /api/v1/posts/:id: Delete an existing post by ID  
+_Preparing For Full-Stack Development_
+
+## Requirements
+
+Please install the following, if you do not already have them installed:
+
+- Node.js v20.10.0
+- Git v2.43.0
+- Visual Studio Code v1.84.2
+
+The versions listed above are the ones used in the book. While installing a newer version should not be an issue, please note that certain steps might work differently on a newer version. If you are having an issue with the code and steps provided in this book, please try using the mentioned versions.
+
+## Install
+
+If you cloned the full repository for the book, Husky may not find the `.git` directory when running `npm install`. In that case, just run `git init` in the root of the corresponding chapter folder.
+
+```bash
+git init
+npm install
+```
+
+## Start
+
+To start the app in development mode, run the following command:
+
+```bash
+npm run dev
+```
