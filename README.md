@@ -1,5 +1,8 @@
-# Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+**Available Routes:**
+GET /api/v1/posts?author=shane: Get a list of posts by author “shane”  
+GET /api/v1/posts?tag=fiction: Get a list of posts with the tag "fiction"  
+GET /api/v1/posts/:id: Get a single post by ID  
+POST /api/v1/posts: Create a new post  
+PATCH /api/v1/posts/:id: Update an existing post by ID  
+DELETE /api/v1/posts/:id: Delete an existing post by ID  
