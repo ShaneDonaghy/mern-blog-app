@@ -1,15 +1,43 @@
-import {useState} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import {Post} from './components/Post.jsx'
+import {CreatePost} from "./components/CreatePost.jsx";
+import {PostFilter} from "./components/PostFilter.jsx";
+import {PostList} from "./components/PostList.jsx";
+import {PostSorting} from "./components/PostSorting.jsx";
+
+const posts = [
+    {
+        title: 'Testing',
+        contents: 'This is how to test',
+        author: 'Shane Donaghy'
+    },
+    {
+        title: 'Developing',
+        contents: 'This is how to build',
+        author: 'Shane Donaghy'
+    },
+    {
+        title: 'HR-ing',
+        contents: 'This is how to waste time',
+        author: 'Not Shane Donaghy'
+    },
+    {
+        title: 'Deploying',
+        contents: 'This is how to deploy',
+        author: 'Shane Donaghy'
+    }
+]
 
 export function App() {
     return (
-        <Post
-            title='Full Stack React Projects'
-            contents='Lets become full stack engineers'
-            author='Shane Donaghy'
-        />
+        <div style={{padding: 8}}>
+            <CreatePost/>
+            <br/>
+            <br/>
+            Filter By:
+            <PostFilter field='author'/>
+            <br/>
+            <PostSorting fields={['createdAt, updatedAt']}/>
+            <br/>
+            <PostList posts={posts}/>
+        </div>
     )
 }
